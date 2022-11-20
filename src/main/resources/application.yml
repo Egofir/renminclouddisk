@@ -1,0 +1,25 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /netdisk
+spring:
+  config:
+    activate:
+      on-profile: dev
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1048MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 5271287
+    url: jdbc:mysql://localhost:3306/netdisk?characterEncoding=utf-8
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+path:
+  baseDir: E:/data/
+maxSize:
+  default: 1.0

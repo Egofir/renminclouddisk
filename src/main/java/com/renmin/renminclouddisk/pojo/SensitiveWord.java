@@ -1,4 +1,4 @@
-package com.renmin.renminclouddisk.model.pojo;
+package com.renmin.renminclouddisk.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

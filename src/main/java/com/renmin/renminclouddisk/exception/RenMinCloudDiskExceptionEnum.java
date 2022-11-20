@@ -5,7 +5,10 @@ public enum RenMinCloudDiskExceptionEnum {
     NEED_PASSWORD(10002, "The password cannot be empty"),
     SENSITIVEWORD_EXISTED(10003, "Username contains sensitive words"),
     PASSWORD_NOT_CONFORM(10004, "The password is invalid"),
-    NAME_EXISTED(10005, "Registration failed because the same name is not allowed");
+    NAME_EXISTED(10005, "Registration failed because the same name is not allowed"),
+    INSERT_FAILED(10006, "Insert failed, please try again"),
+    WRONG_PASSWORD(10007, "wrong password"),
+    SYSTEM_ERROR(20000, "system error");
     private Integer code;
     private String message;
 
