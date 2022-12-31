@@ -3,23 +3,29 @@ server:
   servlet:
     context-path: /netdisk
 spring:
-  config:
-    activate:
-      on-profile: dev
+  profiles:
+    #开发环境
+    active: dev
   servlet:
     multipart:
-      max-file-size: 1024MB
-      max-request-size: 1048MB
+      max-file-size: 1024MB #单次上传文件最大1G
+      max-request-size: 1048MB  #单次会话最大1048MB
+  #druid
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 5271287
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root #用户名
+    password: root  #密码
     url: jdbc:mysql://localhost:3306/netdisk?characterEncoding=utf-8
     type: com.alibaba.druid.pool.DruidDataSource
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#路径
 path:
-  baseDir: E:/data/
+  baseDir: E:/data/ #存储文件的基本目录
+#用户网盘的最大空间
 maxSize:
-  default: 1.0
+  default: 1.0 #(默认1G)
+#日志
+logging:
+  config: classpath:logback-spring.xml
